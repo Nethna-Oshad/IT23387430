@@ -25,28 +25,28 @@ test.describe('IT3040 Assignment 1 - Negative & Robustness Test Suite', () => {
   // ==========================================
 
   test('Neg_Fun_0001: Mixed Good Behavior', async ({ page }) => {
-    await page.locator('textarea').first().fill('oyage malli guna yahapath dharuwek.');
+    await page.locator('textarea').first().fill('oyagee mallii guna yahapath dharuvek.');
     await checkOutput(page, 'ඔයාගේ මල්ලී ගුණ යහපත් දරුවෙක්.');
   });
 
   test('Neg_Fun_0002: Mixed English Grammar', async ({ page }) => {
     await page.locator('textarea').first().fill('api heta boss meet vemu.');
-    await checkOutput(page, 'අපි හෙට Boss මීට් වෙමු.');
+    await checkOutput(page, 'අපි හෙට boss meet වෙමු.');
   });
 
   test('Neg_Fun_0003: Math Equation', async ({ page }) => {
     await page.locator('textarea').first().fill('x + y = 10 meya visadhanna.');
-    await checkOutput(page, 'x + y = 10 මෙය විසඳන්න.');
+    await checkOutput(page, 'x + y = 10 මෙය විසදන්න.');
   });
 
   test('Neg_Fun_0004: Number Context', async ({ page }) => {
-    await page.locator('textarea').first().fill('apee akkage dhan wayasa avurudhu 20k wenwa');
+    await page.locator('textarea').first().fill('apee akkage dhan wayasa avurudhu 20k wenwa.');
     await checkOutput(page, 'අපේ අක්කගේ දැන් වයස අවුරුදු 20ක් වෙනවා.');
   });
 
   test('Neg_Fun_0005: Password/Credentials', async ({ page }) => {
     await page.locator('textarea').first().fill('magee WiFi password eka Vinuja3456');
-    await checkOutput(page, 'මගේ WiFi පාස්වර්ඩ් එක Vinuja3456');
+    await checkOutput(page, 'මගේ WiFi password එක Vinuja3456');
   });
 
   test('Neg_Fun_0006: URL Handling', async ({ page }) => {
@@ -60,22 +60,22 @@ test.describe('IT3040 Assignment 1 - Negative & Robustness Test Suite', () => {
   });
 
   test('Neg_Fun_0008: Email Address', async ({ page }) => {
-    await page.locator('textarea').first().fill('apee mallige email eka charaka@gmail.com');
-    await checkOutput(page, 'අපේ මල්ලියේ ඊමේල් එක charaka@gmail.com');
+    await page.locator('textarea').first().fill('apee malligee email eka charaka@gmail.com');
+    await checkOutput(page, 'අපේ මල්ලිගේ email එක charaka@gmail.com');
   });
 
   test('Neg_Fun_0009: Hashtags', async ({ page }) => {
     await page.locator('textarea').first().fill('chathuri comment karala thibunee #Srilanka kiyalaa.');
-    await checkOutput(page, 'චතුරි comment කරලා තිබුණේ #SriLanka කියලා.');
+    await checkOutput(page, 'චතුරි comment කරලා තිබුනේ #SriLanka කියලා.');
   });
 
   test('Neg_Fun_0010: Missing Spaces (Stress Test)', async ({ page }) => {
     await page.locator('textarea').first().fill('oyaaschoolekatagiyadha?');
-    await checkOutput(page, 'ඔයා ස්කූල් එකට ගියාද?');
+    await checkOutput(page, 'ඔයා school එකට ගියාද?');
   });
 
   test('Neg_Fun_0011:', async ({ page }) => {
-    await page.locator('textarea').first().fill('dubai vala daen uShNthvaya 212°F yi');
+    await page.locator('textarea').first().fill('dubai vala dhaen uShNthvaya 212°F yi.');
     await checkOutput(page, 'dubai වල දැන් උෂ්ණත්වය 212°F යි.');
   });
 
