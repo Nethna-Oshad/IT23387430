@@ -102,7 +102,7 @@ npx playwright test tests/assignmentNeg.spec.js
 ### ▶️ Run Only UI Test Scenario
 
 ```bash
-npx playwright test tests/assignmentPos_UI.spec.js
+npx playwright test tests/assignmentUI.spec.js
 ```
 
 ---
